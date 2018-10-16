@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="415" key="DIALOG_X_ORIGIN"/>
+		<item value="210" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="Sele" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="Sele"/>
+			<item value="Se"/>
+			<item value="默认"/>
+			<item value=" redisTemplate.boundHashOps(&quot;seckillGoods&quot;)"/>
+			<item value="加入"/>
+			<item value="name"/>
+			<item value="mergeCartList"/>
+			<item value="登"/>
+		</list>
+		<list key="replacehistory">
+			<item value="username"/>
+			<item value="9002"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="305" key="DIALOG_WIDTH"/>
+		<item value="1|微软雅黑|8.765218|0|WINDOWS|1|-14|0|0|0|400|0|0|0|1|0|0|0|0|微软雅黑" key="DIALOG_FONT_NAME"/>
+		<item value="348" key="DIALOG_HEIGHT"/>
+		<item value="191" key="DIALOG_X_ORIGIN"/>
+		<item value="409" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

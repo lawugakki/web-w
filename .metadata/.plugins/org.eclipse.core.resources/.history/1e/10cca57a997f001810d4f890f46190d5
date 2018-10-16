@@ -1,0 +1,118 @@
+package com.pinyougou.page.service.impl;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.Writer;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
+
+import com.pinyougou.mapper.TbGoodsDescMapper;
+import com.pinyougou.mapper.TbGoodsMapper;
+import com.pinyougou.mapper.TbItemCatMapper;
+import com.pinyougou.mapper.TbItemMapper;
+import com.pinyougou.page.service.ItemPageService;
+import com.pinyougou.pojo.TbGoods;
+import com.pinyougou.pojo.TbGoodsDesc;
+import com.pinyougou.pojo.TbItem;
+import com.pinyougou.pojo.TbItemExample;
+import com.pinyougou.pojo.TbItemExample.Criteria;
+
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+
+@Service
+public class ItemPageServiceImpl implements ItemPageService{
+	
+	//注入freemarker
+	@Autowired
+	private  FreeMarkerConfigurer  freeMarkerConfigurer;
+	
+	//注入配置文件
+	@Value("${pagedir}")
+	private  String  pagedir;
+	
+	//注入商品数据访问层
+	@Autowired
+	private TbGoodsMapper goodsMapper;
+	
+	//注入商品数据详情访问层
+	@Autowired
+	private  TbGoodsDescMapper goodsDescMapper;
+	
+	//注入商品分类数据访问层
+	@Autowired
+	private TbItemCatMapper catMapper;
+	
+	//注入itemMapper
+	@Autowired
+	private  TbItemMapper itemMapper;
+	
+	@Override
+	public boolean genItemHtml(Long goodsId) {
+		//1,获取配置类
+		Configuration configuration = freeMarkerConfigurer.getConfiguration();
+		
+		try {
+			//2,获取模板	
+			Template template = configuration.getTemplate("item.ftl");
+			//3,创建数据模型
+			Map dataModel =  new HashMap();
+			// 查询数据
+			TbGoods goods = goodsMapper.selectByPrimaryKey(goodsId);
+			dataModel.put("goods", goods);//商品主表数据
+			
+			TbGoodsDesc goodsDesc = goodsDescMapper.selectByPrimaryKey(goodsId);
+			dataModel.put("goodsDesc", goodsDesc);//商品扩展表数据
+			
+			//读取商品分类
+			String cat1 = catMapper.selectByPrimaryKey(goods.getCategory1Id()).getName();//读取一级分类
+			String cat2 = catMapper.selectByPrimaryKey(goods.getCategory2Id()).getName();//读取二级分类
+			String cat3 = catMapper.selectByPrimaryKey(goods.getCategory3Id()).getName();//读取三级分类
+			
+			dataModel.put("cat1", cat1);
+			dataModel.put("cat2", cat2);
+			dataModel.put("cat3", cat3);
+			
+			
+			//SKU 列表
+			TbItemExample example = new TbItemExample();
+			Criteria criteria = example.createCriteria();
+			criteria.andStatusEqualTo("1");//审核通过的商品
+			criteria.andGoodsIdEqualTo(goodsId);//指定SPU ID
+			example.setOrderByClause("is_default desc");//按照状态降序 ,保证第一个为默认
+			List<TbItem> itemList = itemMapper.selectByExample(example);
+			
+			dataModel.put("itemList", itemList);
+			
+			//4,创建输出对象 
+			Writer out  = new FileWriter(pagedir+goodsId+".html");
+			//5,输出
+			template.process(dataModel, out);
+			//6,关流
+			out.close();
+			return  true;
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		} 
+		
+	}
+
+	@Override
+	public boolean deleteItemHtml(Long[] goodsIds) {
+			
+		for(Long goodsId:goodsIds){
+			new File(pagedir+goodsId+".html").delete();
+		}
+		return false;
+	}
+
+}

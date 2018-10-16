@@ -1,0 +1,46 @@
+package com.pinyougou.pay.service.impl;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Value;
+
+import com.alibaba.dubbo.config.annotation.Service;
+import com.github.wxpay.sdk.WXPayUtil;
+import com.pinyougou.pay.service.WeixinPayService;
+@Service
+public class WeixinPayServiceImpl implements WeixinPayService {
+	@Value("${appid}")
+	private  String appid;
+	@Value("${partner}")
+	private  String partner;
+	
+	@Override
+	public Map createNative(String out_trade_no, String total_fee) {
+		//1.参数封装
+		Map  param = new HashMap();
+		param.put("appid", appid);//公众账号id
+		param.put("mch_id", partner);//商户号
+		param.put("nonce_str", WXPayUtil.generateNonceStr());// 随机字符串 由微信工具类生成
+		param.put("", "");
+		param.put("", "");
+		param.put("", "");
+		param.put("", "");
+		param.put("", "");
+		param.put("", "");
+		param.put("", "");
+		param.put("", "");
+		param.put("", "");
+		param.put("", "");
+		//2.发送请求
+				
+		//3.获取结果
+		
+		
+		
+		
+		
+		return null;
+	}
+
+}

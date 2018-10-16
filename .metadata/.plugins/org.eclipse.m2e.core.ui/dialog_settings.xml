@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="csds"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="sdsd"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.MavenProjectSelectionDialog">
+		<item value="480" key="width"/>
+		<item value="502" key="x"/>
+		<item value="63" key="y"/>
+		<item value="450" key="height"/>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="847" key="x"/>
+		<item value="30" key="y"/>
+		<item value="663" key="height"/>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+			<item value="pinyougou-task-service"/>
+			<item value="pinyougou-cart-web"/>
+			<item value="pinyougou-cart-service"/>
+			<item value="pinyougou-cart-interface"/>
+			<item value="pinyougou-page-web"/>
+			<item value="pinyougou-page-service"/>
+			<item value="pinyougou-page-interface"/>
+			<item value="pinyougou-search-web"/>
+			<item value="pinyougou-search-service"/>
+			<item value="pinyougou-search-interface"/>
+			<item value="pinyougou-solr-util"/>
+			<item value="pinyougou-portal-web"/>
+			<item value="pinyougou-content-service"/>
+			<item value="pinyougou-content-interface"/>
+			<item value="pinyougou-shop-web"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\pinyougouWorkSpace\pinyougou-parent\pinyougou-cart-web"/>
+			<item value="D:\pinyougouWorkSpace\casclient_demo1"/>
+			<item value="D:\pinyougouWorkSpace\pinyougou-parent\pinyougou-page-web"/>
+			<item value="D:\pinyougouWorkSpace\pinyougou-parent\pinyougou-content-interface"/>
+			<item value="D:\pinyougouWorkSpace\springjms_producer"/>
+			<item value="D:\pinyougouWorkSpace\pinyougou-parent"/>
+			<item value="D:\pinyougouWorkSpace\pinyougou-parent\pinyougou-content-service"/>
+			<item value="D:\pinyougouWorkSpace\pinyougou-parent\pinyougou-service\src\main\java\com\pinyougou\sellergoods\service\impl\GoodsServiceImpl.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

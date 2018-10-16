@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;pinyougou-page-service/src/main/resources/log4j.properties&apos; to &apos;page.properties&apos;" description="Rename resource &apos;log4j.properties&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/log4j.properties" name="page.properties" stamp="1530373023148" updateReferences="true"/>
+</session>

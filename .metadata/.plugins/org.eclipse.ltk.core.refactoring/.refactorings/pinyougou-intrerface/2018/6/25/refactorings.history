@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;service&apos; to &apos;com.pinyougou.sellergoods.service&apos;&#x0D;&#x0A;- Original project: &apos;pinyougou-intrerface&apos;&#x0D;&#x0A;- Original element: &apos;pinyougou-intrerface/src/main/java/service&apos;&#x0D;&#x0A;- Renamed element: &apos;pinyougou-intrerface/src/main/java/com.pinyougou.sellergoods.service&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;service&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;service" name="com.pinyougou.sellergoods.service" qualified="false" references="true" stamp="1529217969166" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Application.java&apos; to &apos;sms_service/src/main/java/sms&apos;&#x0D;&#x0A;- Original project: &apos;springboot&apos;&#x0D;&#x0A;- Destination element: &apos;sms_service/src/main/java/sms&apos;&#x0D;&#x0A;- Original element: &apos;cn.laowang.demo.Application.java&apos;" description="Copy compilation unit" destination="=sms_service/src\/main\/java&lt;sms" element1="/src\/main\/java&lt;cn.laowang.demo{Application.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1530779129301" units="1" version="1.0"/>
+</session>
